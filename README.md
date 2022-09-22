@@ -49,3 +49,71 @@ React es una biblioteca Javascript de código abierto diseñada para crear inter
 --> [Wikipedia info](https://es.wikipedia.org/wiki/React)
 
 More info: [W3schools](https://www.w3schools.com/whatis/whatis_react.asp)
+
+[Glossary info about React](https://reactjs.org/docs/glossary.html)
+
+## React --> SPA (Single Page Application):
+
+A single-page application is an application that loads a single HTML page and all the necessary assets (such as JavaScript and CSS) required for the application to run. Any interactions with the page or subsequent pages do not require a round trip to the server which means the page is not reloaded.
+
+Though you may build a single-page application in React, it is not a requirement. React can also be used for enhancing small parts of existing websites with additional interactivity. Code written in React can coexist peacefully with markup rendered on the server by something like PHP, or with other client-side libraries. In fact, this is exactly how React is being used at Facebook.
+
+## Package Managers:
+
+Package managers are tools that allow you to manage dependencies in your project. ``npm`` and ``Yarn`` are two package managers commonly used in React applications. Both of them are clients for the same npm package registry.
+
+## JSX:
+
+JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”. To get a basic introduction to JSX see the docs here and find a more in-depth tutorial on JSX here.
+
+React DOM uses camelCase property naming convention instead of HTML attribute names. For example, tabindex becomes tabIndex in JSX. The attribute class is also written as className since class is a reserved word in JavaScript
+
+## Elements:
+
+React ``elements`` are **the building blocks of React applications**. One might confuse elements with a more widely known concept of “components”. An element describes what you want to see on the screen. React elements are immutable.
+
+```
+const element = <h1>Hello, world</h1>;
+```
+Typically, elements are not used directly, but get returned from components.
+
+## Components (are similar to functions):
+
+React components are small, reusable pieces of code that return a React element to be rendered to the page. The simplest version of React component is a plain JavaScript function that returns a React element:
+
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+Components can also be ``ES6 classes``:
+
+```
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+Components can be broken down into distinct pieces of functionality and used within other components. Components can return other components, arrays, strings and numbers. A good rule of thumb is that if a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component. Component names should also always start with a capital letter (<Wrapper/> not <wrapper/>). See this documentation for more information on rendering components.
+
+## props:
+
+props are inputs to a React component. They are data passed down from a parent component to a child component.
+Remember that props are readonly. They should not be modified in any way
+If you need to modify some value in response to user input or a network response, use state instead.
+
+## state:
+
+A component needs state when some **data associated with it changes over time**. For example, a ``Checkbox`` component might need **isChecked** in its state, and a NewsFeed component might want to keep track of fetchedPosts in its state.
+
+The **most important difference between ``state`` and ``props``** is that **props** are passed from a parent component, but **state** is managed by the component itself. A component cannot change its props, but it can change its state.
+
+For each particular piece of changing data, there should be just one component that “owns” it in its state. Don’t try to synchronize states of two different components. Instead, lift it up to their closest shared ancestor, and pass it down as props to both of them.
+
+## Events:
+
+Handling events with React elements has some syntactic differences:
+
+* React event handlers are named using camelCase, rather than lowercase.
+* With JSX you pass a function as the event handler, rather than a string.
