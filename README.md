@@ -65,8 +65,25 @@ Package managers are tools that allow you to manage dependencies in your project
 ## JSX:
 
 JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”. To get a basic introduction to JSX see the docs here and find a more in-depth tutorial on JSX here.
+It was created by Facebook.
 
-React DOM uses camelCase property naming convention instead of HTML attribute names. For example, tabindex becomes tabIndex in JSX. The attribute class is also written as className since class is a reserved word in JavaScript
+React DOM uses camelCase property naming convention instead of HTML attribute names. For example, tabindex becomes tabIndex in JSX. The attribute class is also written as className since class is a reserved word in JavaScript.
+
+¿Por qué JSX?
+
+En lugar de separar artificialmente tecnologías poniendo el maquetado y la lógica en archivos separados, React separa intereses con unidades ligeramente acopladas llamadas “componentes” que contienen ambas. Volveremos a los componentes en otra sección, pero si aún no te sientes cómodo maquetando en JS, esta charla podría convencerte de lo contrario.
+
+React no requiere usar JSX, pero la mayoría de la gente lo encuentra útil como ayuda visual cuando trabajan con interfaz de usuario dentro del código Javascript. Esto también permite que React muestre mensajes de error o advertencia más útiles.
+
+[Muy buena info introductoria de JSX](https://es.reactjs.org/docs/introducing-jsx.html)
+
+More info about JSX:
+- https://thoughtworks-es.medium.com/qu%C3%A9-demonios-es-jsx-txt-f5841e51f664
+
+En cierta manera, JSX es similar al motor de plantillas (templates) **Jinja** hecho para Python (lo usamos en Holberton).
+
+JSX is a syntactic extension to JavaScript that contains these tags and was designed by the React team to enable inline HTML-like markup in JavaScript components. These are similar to the Python Jinja templating engine.
+[Info from here](https://blog.logrocket.com/python-developers-guide-react/#:~:text=JSX%20is%20a%20syntactic%20extension,the%20Python%20Jinja%20templating%20engine.)
 
 ## Elements:
 
