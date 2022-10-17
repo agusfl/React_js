@@ -58,9 +58,12 @@ A single-page application is an application that loads a single HTML page and al
 
 Though you may build a single-page application in React, it is not a requirement. React can also be used for enhancing small parts of existing websites with additional interactivity. Code written in React can coexist peacefully with markup rendered on the server by something like PHP, or with other client-side libraries. In fact, this is exactly how React is being used at Facebook.
 
-## Package Managers:
+## Package Managers (npm - yarn):
 
 Package managers are tools that allow you to manage dependencies in your project. ``npm`` and ``Yarn`` are two package managers commonly used in React applications. Both of them are clients for the same npm package registry.
+
+The major difference between NPM and Yarn comes in terms of security performance. While NPM installs packages sequentially, Yarn performs parallel installation resulting in better speed and performance. NPM has tried to fix vulnerabilities, but still, Yarn is considered more secure than NPM. 
+Info from [here](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm)
 
 ## JSX:
 
